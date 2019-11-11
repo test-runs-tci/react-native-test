@@ -26,6 +26,20 @@
     "react-test-renderer": "16.9.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|react-navigation|@react-navigation/.*|@react-native-community/|native-base))"
+    ],
+    "moduleNameMapper": {
+      "\\.svg": "<rootDir>/__mocks__/svgMock.js"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
