@@ -16,7 +16,7 @@ install:
   - nvm use $NODE_VERSION
   - nvm alias default $NODE_VERSION
 
-  - cd AwesomeProject && npm install react-native-cli --global & cd..
+  - cd AwesomeProject && npm install react-native-cli --global & cd ..
   - cd AwesomeProject && npm install detox-cli --global && cd ..
 
 script:
