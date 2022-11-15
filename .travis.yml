@@ -20,6 +20,6 @@ install:
   - cd AwesomeProject && npm install detox-cli --global && cd ..
 
 script:
-  - cd AwesomeProject
+  - cd ./AwesomeProject
   - detox build --configuration ios.sim.release
   - detox test --configuration ios.sim.release --cleanup
