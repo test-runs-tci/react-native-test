@@ -3,11 +3,11 @@ osx_image: xcode13.4
 
 branches:
   only:
-  - master
+    - master
 
 env:
   global:
-  - NODE_VERSION=stable
+    - NODE_VERSION=stable
 
 install:
   - brew tap wix/brew
@@ -16,10 +16,9 @@ install:
   - nvm use $NODE_VERSION
   - nvm alias default $NODE_VERSION
 
-  - cd AwesomeProject && npm install react-native-cli --global & cd ..
-  - cd AwesomeProject && npm install detox-cli --global && cd ..
+  - npm install react-native-cli --global
+  - npm install detox-cli --global
 
 script:
-  - cd ./AwesomeProject
   - detox build --configuration ios.sim.release
   - detox test --configuration ios.sim.release --cleanup
