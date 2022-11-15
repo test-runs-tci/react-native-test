@@ -15,7 +15,7 @@ install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
   - nvm alias default $NODE_VERSION
-
+  - npm install
   - npm install react-native-cli --global
   - npm install detox-cli --global
 
