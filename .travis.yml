@@ -18,6 +18,7 @@ install:
   - npm install
   - npm install react-native-cli --global
   - npm install detox-cli --global
+  - npm install react-native-cli --save && npm install detox-cli --save
 
 script:
   - detox build --configuration ios.sim.release
