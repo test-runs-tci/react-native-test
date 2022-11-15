@@ -1,0 +1,24 @@
+language: objective-c
+osx_image: xcode14.1
+
+branches:
+  only:
+  - master
+
+env:
+  global:
+  - NODE_VERSION=stable
+
+install:
+- brew tap wix/brew
+- brew install applesimutils
+- nvm install $NODE_VERSION
+- nvm use $NODE_VERSION
+- nvm alias default $NODE_VERSION
+
+#- npm install react-native-cli --global
+#- npm install detox-cli --global
+
+script: true
+#- detox build --configuration ios.sim.release
+#- detox test --configuration ios.sim.release --cleanup
